@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
 	padding: 0;
 	margin: 0;
@@ -35,7 +38,7 @@ nav a {
 .hero-info p {
 	font-size: 24px;
 }
-.hero img {
+.hero .hero-img {
 	border-radius: 100%;
 	animation: morph 8s infinite;
 }
@@ -50,4 +53,20 @@ nav a {
 	100% {
 		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 	}
+}
+
+.icon {
+	display: flex;
+	gap: 20px;
+}
+
+.stack {
+	margin-top: 200px;
+	display: flex;
+	gap: 10px;
+}
+
+.stack ul {
+	display: flex;
+	gap: 30px;
 }
