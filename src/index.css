@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -14,6 +20,13 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 40px;
+	position: fixed;
+	text-align: center;
+	width: 95%;
+	height: 100px;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 }
 
 nav {
@@ -26,14 +39,15 @@ nav a {
 	font-size: 24px;
 }
 .hero {
-	padding-top: 100px;
+	padding-top: 200px;
 	display: flex;
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
 }
-
 .hero-info h1 {
-	font-size: 56px;
+	font-size: 72px;
+	font-weight: bold;
+	color: #333;
 }
 .hero-info p {
 	font-size: 24px;
@@ -71,16 +85,112 @@ nav a {
 	gap: 30px;
 }
 
+.ernur-rotation {
+	position: relative;
+	display: inline-block;
+}
+
 .ernur {
 	width: 500px;
 	border-radius: 10px;
 	margin: 20px;
 }
-.about {
-	background-color: white;
-	width: 100%;
-	padding: 20px 10px 0px 0px;
+
+@keyframes rotateWord {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
 }
+
+/* .ernur-rotation .era-rot {
+	position: absolute;
+	width: 120px;
+	height: 120px; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	font-size: 9px; 
+	background-color: #fff;
+	border: 2px solid black;
+	padding: 10px;
+	border-radius: 50%;
+	text-align: center; 
+	overflow: hidden;
+
+	animation: rotateWord 3600s linear infinite;
+} */
+
+#simple_arc {
+	display: block;
+	width: 200px; /* Adjust width as needed */
+	height: 200px; /* Adjust height as needed */
+	position: relative;
+}
+
+#simple_arc > span[class^='w'] {
+	display: block;
+	position: absolute;
+	font-family: 'Viga';
+	font-size: 14px; /* Adjust font size as needed */
+	font-weight: regular;
+	font-style: normal;
+	line-height: 0.65;
+	white-space: pre;
+	overflow: visible;
+	padding: 0px;
+	transform-origin: 50% 100%;
+}
+
+/* Adjust the rotation and translation for each letter */
+.w0 {
+	transform: rotate(-12.8deg) translateY(-150px);
+}
+.w1 {
+	transform: rotate(-25.6deg) translateY(-150px);
+}
+.w2 {
+	transform: rotate(-38.4deg) translateY(-150px);
+}
+.w3 {
+	transform: rotate(-51.2deg) translateY(-150px);
+}
+.w4 {
+	transform: rotate(-64deg) translateY(-150px);
+}
+.w5 {
+	transform: rotate(-76.8deg) translateY(-150px);
+}
+.w6 {
+	transform: rotate(-90deg) translateY(-150px);
+}
+.w7 {
+	transform: rotate(-102.8deg) translateY(-150px);
+}
+.w8 {
+	transform: rotate(-115.6deg) translateY(-150px);
+}
+.w9 {
+	transform: rotate(-128.4deg) translateY(-150px);
+}
+
+.about {
+	background-color: #fff;
+	width: 100%;
+	padding: 0;
+}
+
+.about_us {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin: 30px;
+}
+
 .hero-container {
 	gap: 40px;
 	display: flex;
@@ -115,19 +225,75 @@ nav a {
 	font-weight: 600;
 	width: 100%;
 	height: 300px;
-	padding: 100px;
 	font-size: 24px;
 	background-color: white;
 }
+.contact-wrapper {
+	width: 80%;
+	margin: auto;
+}
 .paragraph {
-	font-size: 30px;
+	font-size: 25px;
 	display: flex;
 	color: aliceblue;
 	text-align: center;
 	align-items: center;
+	padding: 80px 100px;
+}
+
+.shy {
+	font-size: 40px;
+	font-weight: 600;
+	padding: 23px 0px 23px 0px;
+}
+
+.contact_p {
+	font-size: 20px;
+	color: rgb(91, 151, 255);
+	font-weight: 600;
 }
 .footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
 	width: 100%;
 	height: 200px;
 	background-color: #293133;
+}
+.icons {
+	display: flex;
+	gap: 15px;
+	padding: 100px;
+}
+nav {
+	display: flex;
+}
+
+nav a {
+	margin-right: 10px;
+	text-decoration: none;
+	color: #333;
+}
+
+nav a:hover {
+	color: blue;
+}
+.contact_2 {
+	display: flex;
+	align-items: center;
+}
+
+.hero-p {
+	margin: 30px 0;
+}
+.contact-icon {
+	color: blue;
+	border-radius: 100%;
+	background-color: white;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-p {
+	color: #808080;
 }
