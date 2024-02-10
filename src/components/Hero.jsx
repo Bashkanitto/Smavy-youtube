@@ -16,9 +16,9 @@ export const Hero = () => {
 					<h1 className='hero-h1'>
 						Front-end React <br /> Developer 👋
 					</h1>
-					<p className=' '>
-						Hi im Aidyn, frontend web developer <br /> based on Taraz,
-						Kazakhstan
+					<p className='hero-p'>
+						Hi, I'm Stefan Topalovic. A passionate Front-end React <br />
+						Developer based in Belgrade, Serbia.
 					</p>
 					<div
 						className='icon'
@@ -35,7 +35,7 @@ export const Hero = () => {
 				</div>
 				<div className='stack'>
 					<p>Tech stack</p>
-					<p>|</p>
+					<p className='palka'>|</p>
 					<ul>
 						<img src={html} alt='' />
 						<img src={js} alt='' />
